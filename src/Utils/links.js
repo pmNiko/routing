@@ -1,3 +1,6 @@
+/*
+    Estos links seran los que manejen la url
+*/
 const links = [
     {   
         id : 1,

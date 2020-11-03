@@ -2,8 +2,10 @@ import {Nav} from 'react-bootstrap';
 import {NavLink} from 'react-router-dom';
 import links from '../../Utils/links';
 
-const Navbar = () => {
-    
+/*  El Nav recibe un array de links 
+    los cuales seran accesibles por el usuario
+*/
+const Navbar = () => {    
     return (  
         <>
             <Nav className="justify-content-center" activeKey="/">

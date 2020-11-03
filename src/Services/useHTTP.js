@@ -12,9 +12,7 @@ const useGet = ({url, initialState = []}) => {
     useEffect(() => {
         const get = async () => {
             try {
-                // console.log(`${breaking_bad}${url}`);
                 const {data} = await axios.get(`${breaking_bad}${url}`);
-                // console.log(data);
                 setData(data);
                 setLoading(false);
             }catch(e){
@@ -23,7 +21,6 @@ const useGet = ({url, initialState = []}) => {
         }
         get();
     }, [url]);
-
     
     return [data,isLoading,error];
 }

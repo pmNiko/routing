@@ -3,10 +3,9 @@ import useGet from '../../Services/useHTTP';
 import {Card,Button,Container,Row,Col} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 
-const Personajes = ({match}) => {
-
+const Personajes = () => {
+    // array de props que me devuelve el custom hook
     const [personajes,isLoading,error] = useGet({url: ""});
-    console.log(personajes.length);
 
     return (  
         <>
@@ -21,7 +20,12 @@ const Personajes = ({match}) => {
                                     <Card.Title> {name} {nickname || ""} </Card.Title>
                                     <Card.Text> {status} {birthday} {occupation || ""} </Card.Text>
                                     <Button block>
-                                        <Link to={`/personajes/${char_id}`} className="text-white"> Ver detalle </Link>
+                                        <Link 
+                                            // con esta ruta accedemos al componente de detalle
+                                            to={`/personaje/${char_id}`} 
+                                            className="text-white"
+                                            > Ver detalle 
+                                        </Link>
                                     </Button>
                                 </Card.Body>
                             </Card>
