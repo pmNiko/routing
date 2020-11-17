@@ -13,6 +13,7 @@ const useGet = ({url, initialState = []}) => {
         const get = async () => {
             try {
                 const {data} = await axios.get(`${breaking_bad}${url}`);
+                console.log(`${breaking_bad}${url}`);
                 setData(data);
                 setLoading(false);
             }catch(e){
