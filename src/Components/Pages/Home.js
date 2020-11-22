@@ -1,7 +1,6 @@
+import React from "react";
 const Home = () => {
-    return (  
-        <h2>Llegaste al home</h2>
-    );
-}
- 
+  return <h1>Home de la App</h1>;
+};
+
 export default Home;
